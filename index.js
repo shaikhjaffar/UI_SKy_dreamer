@@ -4,13 +4,13 @@
 //   });
   var interval ;
 
-   function navigate(){
-    interval = setInterval(scrollVertical,30)
+   function navigate(id){
+    interval = setInterval(scrollVertical,30,id)
    }
    
- function scrollVertical (){
+ function scrollVertical (id){
   
-    var targetSectionCordinate = document.getElementById('contact').getBoundingClientRect()
+    var targetSectionCordinate = document.getElementById(id).getBoundingClientRect()
     if (targetSectionCordinate.top <= 50){
         clearInterval(interval);
         return

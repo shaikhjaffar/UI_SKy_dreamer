@@ -1,7 +1,7 @@
-// $('body').ripples({
-//     dropRadius: 25,
-//     perturbance: 0.001,
-//   });
+$('body').ripples({
+    dropRadius: 10,
+    perturbance: 0.002,
+  });
   var interval ;
 
    function navigate(id){
@@ -26,6 +26,24 @@
     }
   }
   window.addEventListener('scroll',inVisible)
+  
+ function sendData() {
+   const AllInput = document.querySelectorAll('.main input')  
+   for (let Input of AllInput){
+    console.log(Input.value)
+   }
+   AllInput.forEach(input => input.value = "")
+  const requestOption = {
+    method:"POST",
+    header : {'Content-Type':'application/json'},
+    body:{} ,
+ }
+    fetch('',requestOption)
+    .then((res) => {res.json()
+     console.log(res)
+     
+   })
+ }
 
 
   

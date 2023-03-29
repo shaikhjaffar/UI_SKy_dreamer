@@ -234,10 +234,12 @@ gap: 20px;
          align-items: center;
          border-style:dotted;
    min-width: 120px;
-   position: absolute;
-top: 123px;
+         position: relative;
+          top: 32px;
+          right: 0px;
+
 cursor: pointer;
-right: 50px;
+
 z-index: 15;
       }
       button[type="submit"]{
